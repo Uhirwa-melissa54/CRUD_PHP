@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Sign Up Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+        }
+        form {
+            max-width: 450px;
+            margin: 50px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 0 8px rgba(0,0,0,0.1);
+        }
+        fieldset {
+            border: 1px solid #ccc;
+            padding: 15px 20px 20px;
+            border-radius: 5px;
+        }
+        legend {
+            font-weight: bold;
+            padding: 0 10px;
+        }
+        label {
+            display: block;
+            margin-top: 15px;
+            font-weight: 600;
+        }
+        input[type="text"],
+        input[type="email"],
+        input[type="password"] {
+            width: 100%;
+            padding: 8px;
+            margin-top: 6px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        .gender-options {
+            margin-top: 10px;
+        }
+        .gender-options input {
+            margin-left: 0;
+            margin-right: 6px;
+        }
+        input[type="submit"] {
+            margin-top: 20px;
+            padding: 10px 22px;
+            background-color: #4CAF50;
+            border: none;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <form action="create.php" method="post">
+        <h1>Sign Up Form</h1>
+        <fieldset>
+            <legend>Personal Information</legend>
+
+            <label for="fname">First Name</label>
+            <input type="text" id="fname" name="fname" required />
+
+            <label for="lname">Last Name</label>
+            <input type="text" id="lname" name="lname" required />
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required />
+
+            <label for="pass">Password</label>
+            <input type="password" id="pass" name="pass" required />
+
+            <label for="id">ID</label>
+            <input type="text" id="id" name="id" required />
+
+            <div class="gender-options">
+                <label>Gender</label>
+                <input type="radio" id="male" name="gender" value="M" required />
+                <label for="male" style="display:inline;">Male</label>
+
+                <input type="radio" id="female" name="gender" value="F" required />
+                <label for="female" style="display:inline;">Female</label>
+            </div>
+
+            <input type="submit" name="submit" value="Sign Up" />
+        </fieldset>
+    </form>
+</body>
+</html>
